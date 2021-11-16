@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>各國國旗學習平台</title>
+    <!-- button style -->
+    <link rel="stylesheet" href="./css/button.css" />
+    <!-- style.css -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- 遊戲初始畫面 -->
+    <div class="container" id="home">
+      <div>
+        <h1>各國國旗學習平台</h1>
+        <button type="button" class="button-28" id="startBtn">遊戲開始!</button>
+      </div>
+    </div>
+
+    <!-- 遊戲 -->
+    <div class="container" id="game" style="display: none">
+      <div class="scoreCount">
+        <div>使用時間: <span id="timeUsed">0</span></div>
+        <div>翻牌次數: <span id="turnTimes">0</span></div>
+      </div>
+      <h2>國旗</h2>
+      <div class="upper-box"></div>
+      <h2>國名</h2>
+      <div class="lower-box"></div>
+      <div id="solved"></div>
+      <button type="button" class="button-28 homeBtn">回首頁</button>
+    </div>
+
+    <!-- 下一關訊息 -->
+    <div class="nextStageInfo" style="display: none">
+      <div class="box">
+        <h2>你真棒!</h2>
+        <div class="record">
+          <div>目前過了<span class="clock">0</span>秒</div>
+          <div>翻牌翻了<span class="turn">0</span>次</div>
+        </div>
+        <button id="nextBtn" class="button-28">進入下一關</button>
+      </div>
+    </div>
+
+    <!-- 挑戰成功訊息 -->
+    <div class="finalInfo container" style="display: none">
+      <h2>YOU WIN!</h2>
+      <div class="record">
+        <div>總共花了<span class="clock">0</span>秒</div>
+        <div>翻牌翻了<span class="turn">0</span>次</div>
+      </div>
+      <div class="btns">
+        <button class="button-28" type="button" id="replayBtn">再次挑戰</button>
+        <button type="button" class="button-28 homeBtn">回首頁</button>
+      </div>
+    </div>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/flagGame.js"></script>
+  </body>
+</html>
